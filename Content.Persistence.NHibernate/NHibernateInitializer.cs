@@ -40,7 +40,6 @@ namespace Content.Persistence.NHibernate
             return Fluently.Configure()
                 .Database(GetDatabaseConfiguration)
                 .Mappings(m => m.FluentMappings.AddFromAssemblyOf<NHibernateInitializer>())
-                .Mappings(m => m.FluentMappings.AddFromAssemblyOf<DomainAssemblyMarker>())
                 .ExposeConfiguration(Expose)
                 .BuildConfiguration();
         }
